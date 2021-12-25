@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem.jsx";
+import ImageGalleryItem from "./ImageGalleryItem/ImageGalleryItem.jsx";
 import s from "./imageGallery.module.css";
 
 function ImageGallery({ gallery, onClick }) {

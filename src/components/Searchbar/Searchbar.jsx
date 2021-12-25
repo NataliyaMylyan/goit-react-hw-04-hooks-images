@@ -7,8 +7,8 @@ import s from "./searchbar.module.css";
 const Searchbar = ({ onSubmit }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const handleChange = (event) => {
-    setSearchQuery(event.target.value.toLowerCase());
+  const handleChange = ({ target: { value } }) => {
+    setSearchQuery(value.toLowerCase());
   };
 
   const handleSubmit = (event) => {

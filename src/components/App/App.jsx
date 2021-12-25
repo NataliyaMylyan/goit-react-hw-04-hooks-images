@@ -22,8 +22,8 @@ const App = () => {
     setLoading(true);
     async function fetchImagesGallery() {
       try {
-        const res = await api.fetchImages(searchQuery, currentPage);
-        setGallery((prevGallery) => [...prevGallery, ...res.hits]);
+        const { hits } = await api.fetchImages(searchQuery, currentPage);
+        setGallery((prevGallery) => [...prevGallery, ...hits]);
         window.scrollTo({
           top: document.documentElement.scrollHeight,
           behavior: "smooth",
@@ -56,7 +56,7 @@ const App = () => {
 
   const closeModal = () => {
     setShowModal(false);
-    setLargeImageUrl("");
+    setLargeImageUrl();
   };
 
   return (
